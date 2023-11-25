@@ -1,0 +1,64 @@
+{
+  "name": "undo-commit-button",
+  "displayName": "Undo Commit Button",
+  "description": "Adds a button to the status bar to undo the last commit",
+  "version": "0.0.1",
+  "publisher": "3raphat",
+  "icon": "images/icon.png",
+  "packageManager": "pnpm@8.10.5",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3raphat/undo-commit-button.git"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.undoCommit",
+        "title": "Undo Commit"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "extension.undoCommit",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "lint:fix": "eslint src --ext ts --fix",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vscode/test-electron": "^2.3.6",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "simple-git": "^3.21.0"
+  }
+}
