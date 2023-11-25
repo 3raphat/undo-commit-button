@@ -2,7 +2,7 @@
   "name": "undo-commit-button",
   "displayName": "Undo Commit Button",
   "description": "Adds a button to the status bar to undo the last commit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "3raphat",
   "icon": "images/icon.png",
   "packageManager": "pnpm@8.10.5",
