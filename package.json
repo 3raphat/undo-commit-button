@@ -27,15 +27,7 @@
         "command": "extension.undoCommit",
         "title": "Undo Commit"
       }
-    ],
-    "menus": {
-      "editor/title": [
-        {
-          "command": "extension.undoCommit",
-          "group": "navigation"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
