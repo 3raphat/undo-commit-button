@@ -3,7 +3,7 @@ import simpleGit from "simple-git";
 
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "extension.undoCommit",
+    "undo-commit-button.undoCommit",
     async () => {
       try {
         // Get the root path of the workspace
@@ -37,11 +37,9 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   // Create a button in the UI
-  let button = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Left
-  );
+  let button = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
   button.text = "$(discard) Undo Commit";
-  button.command = "extension.undoCommit";
+  button.command = "undo-commit-button.undoCommit";
   button.tooltip = "Undo the last commit";
   button.show();
 
