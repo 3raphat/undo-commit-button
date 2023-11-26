@@ -2,7 +2,7 @@
   "name": "undo-commit-button",
   "displayName": "Undo Commit Button",
   "description": "Adds a button to the status bar to undo the last commit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "3raphat",
   "icon": "images/icon.png",
   "packageManager": "pnpm@8.10.5",
@@ -14,6 +14,12 @@
   "engines": {
     "vscode": "^1.84.0"
   },
+  "keywords": [
+    "git",
+    "undo",
+    "commit",
+    "button"
+  ],
   "categories": [
     "Other"
   ],
